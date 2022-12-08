@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9BD317FF3ECA2CB453B8D703 /* Pods_VOM_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0F707A14CDDA54E0D65114 /* Pods_VOM_Task.framework */; };
 		BF7119D129424AAE00BB95D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7119D029424AAE00BB95D1 /* AppDelegate.swift */; };
 		BF7119D329424AAE00BB95D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7119D229424AAE00BB95D1 /* SceneDelegate.swift */; };
 		BF7119D529424AAE00BB95D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7119D429424AAE00BB95D1 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A0F707A14CDDA54E0D65114 /* Pods_VOM_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VOM_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F547D639B60C93AF905D76E /* Pods-VOM-Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VOM-Task.release.xcconfig"; path = "Target Support Files/Pods-VOM-Task/Pods-VOM-Task.release.xcconfig"; sourceTree = "<group>"; };
+		AFAFB0F5FE642247488DF690 /* Pods-VOM-Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VOM-Task.debug.xcconfig"; path = "Target Support Files/Pods-VOM-Task/Pods-VOM-Task.debug.xcconfig"; sourceTree = "<group>"; };
 		BF7119CD29424AAE00BB95D1 /* VOM-Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VOM-Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7119D029424AAE00BB95D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF7119D229424AAE00BB95D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BD317FF3ECA2CB453B8D703 /* Pods_VOM_Task.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		926911D4ECA22DD9A48DC94E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A0F707A14CDDA54E0D65114 /* Pods_VOM_Task.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BF7119C429424AAE00BB95D1 = {
 			isa = PBXGroup;
 			children = (
 				BF7119CF29424AAE00BB95D1 /* VOM-Task */,
 				BF7119CE29424AAE00BB95D1 /* Products */,
+				F1372F8193E10EB86711DAF0 /* Pods */,
+				926911D4ECA22DD9A48DC94E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = "VOM-Task";
 			sourceTree = "<group>";
 		};
+		F1372F8193E10EB86711DAF0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AFAFB0F5FE642247488DF690 /* Pods-VOM-Task.debug.xcconfig */,
+				8F547D639B60C93AF905D76E /* Pods-VOM-Task.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF7119E129424AB100BB95D1 /* Build configuration list for PBXNativeTarget "VOM-Task" */;
 			buildPhases = (
+				F94A7F5F6CE2F65C18CAF290 /* [CP] Check Pods Manifest.lock */,
 				BF7119C929424AAE00BB95D1 /* Sources */,
 				BF7119CA29424AAE00BB95D1 /* Frameworks */,
 				BF7119CB29424AAE00BB95D1 /* Resources */,
@@ -103,7 +129,7 @@
 				};
 			};
 			buildConfigurationList = BF7119C829424AAE00BB95D1 /* Build configuration list for PBXProject "VOM-Task" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -132,6 +158,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F94A7F5F6CE2F65C18CAF290 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VOM-Task-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BF7119C929424AAE00BB95D1 /* Sources */ = {
@@ -282,6 +333,7 @@
 		};
 		BF7119E229424AB100BB95D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFAFB0F5FE642247488DF690 /* Pods-VOM-Task.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -309,6 +361,7 @@
 		};
 		BF7119E329424AB100BB95D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F547D639B60C93AF905D76E /* Pods-VOM-Task.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
