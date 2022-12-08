@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+struct NetworkResponse<T: Codable>: Codable {
+    
+    var data: T?
+    var errors: NetworkError?
+    
+    enum CodingKeys: String, CodingKey {
+        
+        case data
+        case errors
+    }
+}

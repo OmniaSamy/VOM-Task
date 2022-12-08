@@ -14,6 +14,17 @@
 		BF7119D829424AAE00BB95D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7119D629424AAE00BB95D1 /* Main.storyboard */; };
 		BF7119DA29424AB100BB95D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF7119D929424AB100BB95D1 /* Assets.xcassets */; };
 		BF7119DD29424AB100BB95D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7119DB29424AB100BB95D1 /* LaunchScreen.storyboard */; };
+		BFB8859629425C7100C6B820 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB8859529425C7100C6B820 /* NetworkManager.swift */; };
+		BFB8859829425D0F00C6B820 /* NetworkManager+ParseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB8859729425D0F00C6B820 /* NetworkManager+ParseResponse.swift */; };
+		BFB8859A29425D1F00C6B820 /* NetworkDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB8859929425D1F00C6B820 /* NetworkDefaults.swift */; };
+		BFB8859D29425D5C00C6B820 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB8859C29425D5C00C6B820 /* NetworkResponse.swift */; };
+		BFB8859F29425D7400C6B820 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB8859E29425D7400C6B820 /* NetworkError.swift */; };
+		BFB885A129425D8A00C6B820 /* MetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885A029425D8A00C6B820 /* MetaData.swift */; };
+		BFB885A5294260B200C6B820 /* FixerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885A4294260B200C6B820 /* FixerService.swift */; };
+		BFB885A7294260E200C6B820 /* NetworkManager+Fixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885A6294260E200C6B820 /* NetworkManager+Fixer.swift */; };
+		BFB885A9294262D300C6B820 /* AppDelegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885A8294262D300C6B820 /* AppDelegate+Extension.swift */; };
+		BFB885AD29426C8200C6B820 /* ResultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885AC29426C8200C6B820 /* ResultsModel.swift */; };
+		BFB885AF29426D4000C6B820 /* CurrencyDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885AE29426D4000C6B820 /* CurrencyDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +39,17 @@
 		BF7119D929424AB100BB95D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF7119DC29424AB100BB95D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF7119DE29424AB100BB95D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFB8859529425C7100C6B820 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		BFB8859729425D0F00C6B820 /* NetworkManager+ParseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+ParseResponse.swift"; sourceTree = "<group>"; };
+		BFB8859929425D1F00C6B820 /* NetworkDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDefaults.swift; sourceTree = "<group>"; };
+		BFB8859C29425D5C00C6B820 /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		BFB8859E29425D7400C6B820 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		BFB885A029425D8A00C6B820 /* MetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaData.swift; sourceTree = "<group>"; };
+		BFB885A4294260B200C6B820 /* FixerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixerService.swift; sourceTree = "<group>"; };
+		BFB885A6294260E200C6B820 /* NetworkManager+Fixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+Fixer.swift"; sourceTree = "<group>"; };
+		BFB885A8294262D300C6B820 /* AppDelegate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Extension.swift"; sourceTree = "<group>"; };
+		BFB885AC29426C8200C6B820 /* ResultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsModel.swift; sourceTree = "<group>"; };
+		BFB885AE29426D4000C6B820 /* CurrencyDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +96,9 @@
 				BFB885912942593300C6B820 /* AppDelegate+SceneDelegate */,
 				BFB885922942594900C6B820 /* StoryBoard */,
 				BFB8859329425A2300C6B820 /* Resources */,
-				BF7119D429424AAE00BB95D1 /* ViewController.swift */,
+				BFB8859429425C5800C6B820 /* NetworkServices */,
+				BFB8859B29425D4700C6B820 /* Models */,
+				BFB885AA2942651A00C6B820 /* Scenes */,
 				BF7119DE29424AB100BB95D1 /* Info.plist */,
 			);
 			path = "VOM-Task";
@@ -84,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				BF7119D029424AAE00BB95D1 /* AppDelegate.swift */,
+				BFB885A8294262D300C6B820 /* AppDelegate+Extension.swift */,
 				BF7119D229424AAE00BB95D1 /* SceneDelegate.swift */,
 			);
 			path = "AppDelegate+SceneDelegate";
@@ -106,6 +131,78 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		BFB8859429425C5800C6B820 /* NetworkServices */ = {
+			isa = PBXGroup;
+			children = (
+				BFB885A229425E1E00C6B820 /* Services */,
+				BFB8859529425C7100C6B820 /* NetworkManager.swift */,
+				BFB8859729425D0F00C6B820 /* NetworkManager+ParseResponse.swift */,
+				BFB8859929425D1F00C6B820 /* NetworkDefaults.swift */,
+			);
+			path = NetworkServices;
+			sourceTree = "<group>";
+		};
+		BFB8859B29425D4700C6B820 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BFB885AB29426B7600C6B820 /* Fixer */,
+				BFB8859C29425D5C00C6B820 /* NetworkResponse.swift */,
+				BFB8859E29425D7400C6B820 /* NetworkError.swift */,
+				BFB885A029425D8A00C6B820 /* MetaData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BFB885A229425E1E00C6B820 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BFB885A32942609000C6B820 /* Fixer Service */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BFB885A32942609000C6B820 /* Fixer Service */ = {
+			isa = PBXGroup;
+			children = (
+				BFB885A4294260B200C6B820 /* FixerService.swift */,
+				BFB885A6294260E200C6B820 /* NetworkManager+Fixer.swift */,
+			);
+			path = "Fixer Service";
+			sourceTree = "<group>";
+		};
+		BFB885AA2942651A00C6B820 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BFB885B0294271B300C6B820 /* Home */,
+				BFB885B1294271BA00C6B820 /* Details */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		BFB885AB29426B7600C6B820 /* Fixer */ = {
+			isa = PBXGroup;
+			children = (
+				BFB885AC29426C8200C6B820 /* ResultsModel.swift */,
+				BFB885AE29426D4000C6B820 /* CurrencyDataModel.swift */,
+			);
+			path = Fixer;
+			sourceTree = "<group>";
+		};
+		BFB885B0294271B300C6B820 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BF7119D429424AAE00BB95D1 /* ViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BFB885B1294271BA00C6B820 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 		F1372F8193E10EB86711DAF0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +223,7 @@
 				BF7119C929424AAE00BB95D1 /* Sources */,
 				BF7119CA29424AAE00BB95D1 /* Frameworks */,
 				BF7119CB29424AAE00BB95D1 /* Resources */,
+				BE7C019C6C714C0FF04C726C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,6 +281,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		BE7C019C6C714C0FF04C726C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VOM-Task/Pods-VOM-Task-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VOM-Task/Pods-VOM-Task-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VOM-Task/Pods-VOM-Task-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F94A7F5F6CE2F65C18CAF290 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -212,8 +327,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFB885AD29426C8200C6B820 /* ResultsModel.swift in Sources */,
+				BFB885A5294260B200C6B820 /* FixerService.swift in Sources */,
+				BFB8859629425C7100C6B820 /* NetworkManager.swift in Sources */,
+				BFB8859F29425D7400C6B820 /* NetworkError.swift in Sources */,
+				BFB885AF29426D4000C6B820 /* CurrencyDataModel.swift in Sources */,
+				BFB885A7294260E200C6B820 /* NetworkManager+Fixer.swift in Sources */,
 				BF7119D529424AAE00BB95D1 /* ViewController.swift in Sources */,
+				BFB8859D29425D5C00C6B820 /* NetworkResponse.swift in Sources */,
+				BFB8859829425D0F00C6B820 /* NetworkManager+ParseResponse.swift in Sources */,
+				BFB885A129425D8A00C6B820 /* MetaData.swift in Sources */,
 				BF7119D129424AAE00BB95D1 /* AppDelegate.swift in Sources */,
+				BFB8859A29425D1F00C6B820 /* NetworkDefaults.swift in Sources */,
+				BFB885A9294262D300C6B820 /* AppDelegate+Extension.swift in Sources */,
 				BF7119D329424AAE00BB95D1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
