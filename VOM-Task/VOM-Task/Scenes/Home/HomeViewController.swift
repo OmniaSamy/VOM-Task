@@ -13,17 +13,29 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        getData()
     }
 
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension HomeViewController {
+    
+    private func getData() {
+        NetworkManager.shared
+            .getCurrencyRates(currency: "USD",
+                    completion: {[weak self] (result: Result<CurrencyDataModel, NetworkError>, _) in
+                
+                switch result {
+                case .success(let data):
+                    print("data \(data)")
+//                    self?.presenter?.serachSucess(data: data)
+                    
+                case .failure(let error):
+                    print("error \(error)")
+//                    self?.presenter?.serachFail(error: error)
+                }
+            })
     }
-    */
-
 }
