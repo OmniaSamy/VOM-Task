@@ -24,4 +24,10 @@ class CurrencyTableViewCell: UITableViewCell {
         
         currencyImageView.image = UIImage(named: currency.key ?? "placeholder_Icon")
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        currencyImageView.image = UIImage(named: "placeholder_Icon")
+    }
 }
