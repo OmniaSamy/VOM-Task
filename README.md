@@ -27,5 +27,32 @@ solution:
      A. recursive approach
      B. iterative approach
      
-  solution:
+  solution: 
+       A. recursive approach
+       ```
+        func generateFibonacciRecursive(n: Int) -> [Int] {
+        
+        var result: [Int] = []
+        
+        for n in 0 ... n {
+            
+            if n == 0 {
+                result.append(0)
+            }
+            else if n == 1 {
+                result.append(1)
+            }
+            else {
+                result.append (result[n-1] + result[n-2] )
+            }
+        }
+        return result
+    }
+       ```
+       B. iterative approach
+       
+        ```
+        
+        ```
+       
   
