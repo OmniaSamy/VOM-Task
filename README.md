@@ -22,3 +22,10 @@ solution:
         }
      }
 ```
+ 
+ III. Write a method in Swift to generate the nth Fibonacci number (1, 1, 2, 3, 5, 8, 13, 21, 34)
+     A. recursive approach
+     B. iterative approach
+     
+  solution:
+  
