@@ -52,6 +52,7 @@ extension HomeViewController {
 extension HomeViewController {
     
     private func setUpScreenDesign() {
+        self.title = "Home"
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: CurrencyTableViewCell.className, bundle: nil),
@@ -139,6 +140,9 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let currency = viewModel?.currencyRateList?[indexPath.row] else { return }
         
+        let viewModel = DetailsViewModel()
+        let viewController = DetailsViewController(viewModel: viewModel)
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
