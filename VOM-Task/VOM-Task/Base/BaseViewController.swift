@@ -17,7 +17,6 @@ class BaseViewController: UIViewController {
     }
 }
 
-
 extension BaseViewController: LoaderProtocol {
     
     func showLoadingIndicator(view: UIView, type: LoaderType) {

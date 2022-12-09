@@ -22,7 +22,6 @@ class CurrencyTableViewCell: UITableViewCell {
         currencyNameLabel.text = currency.key
         currencyValueLabel.text = String(currency.value ?? 0)
         
-        
         currencyImageView.image = UIImage(named: currency.key ?? "placeholder_Icon")
     }
 }
