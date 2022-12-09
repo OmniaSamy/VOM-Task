@@ -36,6 +36,8 @@
 		BFB885CD29432BF400C6B820 /* CurrencyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFB885CB29432BF400C6B820 /* CurrencyTableViewCell.xib */; };
 		BFB885D029432C4400C6B820 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885CF29432C4400C6B820 /* NSObject+Extension.swift */; };
 		BFB885D229433BD600C6B820 /* CurrencySymbolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885D129433BD600C6B820 /* CurrencySymbolModel.swift */; };
+		BFB885D42943562B00C6B820 /* UIColor+app.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885D32943562B00C6B820 /* UIColor+app.swift */; };
+		BFB885D82943567800C6B820 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFB885D72943567800C6B820 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		BFB885CB29432BF400C6B820 /* CurrencyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyTableViewCell.xib; sourceTree = "<group>"; };
 		BFB885CF29432C4400C6B820 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		BFB885D129433BD600C6B820 /* CurrencySymbolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySymbolModel.swift; sourceTree = "<group>"; };
+		BFB885D32943562B00C6B820 /* UIColor+app.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+app.swift"; sourceTree = "<group>"; };
+		BFB885D72943567800C6B820 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +154,8 @@
 		BFB8859329425A2300C6B820 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BF7119D929424AB100BB95D1 /* Assets.xcassets */,
+				BFB885D62943565300C6B820 /* Assets */,
+				BFB885D52943565100C6B820 /* Colors */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -272,8 +277,25 @@
 			isa = PBXGroup;
 			children = (
 				BFB885CF29432C4400C6B820 /* NSObject+Extension.swift */,
+				BFB885D32943562B00C6B820 /* UIColor+app.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		BFB885D52943565100C6B820 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				BFB885D72943567800C6B820 /* Colors.xcassets */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		BFB885D62943565300C6B820 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				BF7119D929424AB100BB95D1 /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		F1372F8193E10EB86711DAF0 /* Pods */ = {
@@ -348,6 +370,7 @@
 				BF7119DD29424AB100BB95D1 /* LaunchScreen.storyboard in Resources */,
 				BFB885CD29432BF400C6B820 /* CurrencyTableViewCell.xib in Resources */,
 				BF7119DA29424AB100BB95D1 /* Assets.xcassets in Resources */,
+				BFB885D82943567800C6B820 /* Colors.xcassets in Resources */,
 				BFB885B52942766E00C6B820 /* HomeViewController.xib in Resources */,
 				BFB885C42943257E00C6B820 /* DetailsViewController.xib in Resources */,
 			);
@@ -415,6 +438,7 @@
 				BFB885BE294322BD00C6B820 /* Loader.swift in Sources */,
 				BFB8859D29425D5C00C6B820 /* NetworkResponse.swift in Sources */,
 				BFB8859829425D0F00C6B820 /* NetworkManager+ParseResponse.swift in Sources */,
+				BFB885D42943562B00C6B820 /* UIColor+app.swift in Sources */,
 				BFB885C82943262500C6B820 /* BaseViewModelProtocol.swift in Sources */,
 				BFB885A129425D8A00C6B820 /* MetaData.swift in Sources */,
 				BF7119D129424AAE00BB95D1 /* AppDelegate.swift in Sources */,

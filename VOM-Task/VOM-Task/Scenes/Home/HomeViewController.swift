@@ -83,14 +83,13 @@ extension HomeViewController {
     private func getCurrancyRates() {
         
         self.showLoadingIndicator(view: self.view, type: .native)
-        
         viewModel?.getCurrencyRates(completion: {[weak self] (msg, success) in
             guard let self = self else { return }
             self.hideLoadingIndicator()
             if success {
                 self.bindData()
             } else {
-                
+                self.showErrorMessage(errorMessage: msg ?? "")
             }
         })
     }
@@ -105,7 +104,7 @@ extension HomeViewController {
             if success {
                 self.setUpCurrencyDropDown()
             } else {
-                
+                self.showErrorMessage(errorMessage: msg ?? "")
             }
         })
     }

@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-//import MBProgressHUD
 
 class Loader: NSObject {
     
@@ -22,21 +21,13 @@ class Loader: NSObject {
         }
         
         let spinnerView = UIView(frame: UIScreen.main.bounds)
-        spinnerView.backgroundColor = .lightGray
+        spinnerView.backgroundColor = .loaderBackgroundColor
         
         let viewBackgroundLoading: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
         
         switch type {
         case .custom:
-            
-//            let hud = MBProgressHUD.showAdded(to: onView, animated: true)
-//            hud.backgroundView.style = MBProgressHUDBackgroundStyle.solidColor
-//            hud.backgroundView.color = .loaderBackgroundColor
-//            //            hud.bezelView.backgroundColor = UIColor.secondaryColor1
-//            hud.contentColor = .primaryColor
-//            hud.mode = MBProgressHUDMode.indeterminate
-//            hud.bezelView.cornurRadius = 15
-            print("")
+            print(" make any customization like use specific framework like MBProgressHUD")
             
         case .native:
             let activityIndicator = UIActivityIndicatorView(style: .large)
@@ -63,9 +54,4 @@ class Loader: NSObject {
         sharedViewSpinner?.removeFromSuperview()
         sharedViewSpinner = nil
     }
-    
-//    class func hideCustomLoader() {
-//        // custom
-//        MBProgressHUD.hide(for: onView, animated: true)
-//    }
 }
