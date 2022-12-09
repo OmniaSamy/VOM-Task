@@ -9,7 +9,7 @@ import Foundation
 
 typealias BlockWithMessageAndBool = (String? , Bool)->Void
 
-protocol HomeViewModelProtocol {
+protocol HomeViewModelProtocol: BaseViewModelProtocol {
     func getCurrencyRates(currency: String, completion: @escaping BlockWithMessageAndBool)
     var currancyData: CurrencyDataModel? { set get }
 }

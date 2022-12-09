@@ -29,6 +29,10 @@
 		BFB885BA29431F8F00C6B820 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885B929431F8F00C6B820 /* BaseViewController.swift */; };
 		BFB885BE294322BD00C6B820 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885BD294322BD00C6B820 /* Loader.swift */; };
 		BFB885C0294322F100C6B820 /* LoaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885BF294322F100C6B820 /* LoaderProtocol.swift */; };
+		BFB885C32943257E00C6B820 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885C12943257E00C6B820 /* DetailsViewController.swift */; };
+		BFB885C42943257E00C6B820 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFB885C22943257E00C6B820 /* DetailsViewController.xib */; };
+		BFB885C62943259400C6B820 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885C52943259400C6B820 /* DetailsViewModel.swift */; };
+		BFB885C82943262500C6B820 /* BaseViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885C72943262500C6B820 /* BaseViewModelProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +62,10 @@
 		BFB885B929431F8F00C6B820 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BFB885BD294322BD00C6B820 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		BFB885BF294322F100C6B820 /* LoaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderProtocol.swift; sourceTree = "<group>"; };
+		BFB885C12943257E00C6B820 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		BFB885C22943257E00C6B820 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		BFB885C52943259400C6B820 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		BFB885C72943262500C6B820 /* BaseViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +218,9 @@
 		BFB885B1294271BA00C6B820 /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				BFB885C12943257E00C6B820 /* DetailsViewController.swift */,
+				BFB885C22943257E00C6B820 /* DetailsViewController.xib */,
+				BFB885C52943259400C6B820 /* DetailsViewModel.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -218,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				BFB885B929431F8F00C6B820 /* BaseViewController.swift */,
+				BFB885C72943262500C6B820 /* BaseViewModelProtocol.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -311,6 +323,7 @@
 				BF7119DD29424AB100BB95D1 /* LaunchScreen.storyboard in Resources */,
 				BF7119DA29424AB100BB95D1 /* Assets.xcassets in Resources */,
 				BFB885B52942766E00C6B820 /* HomeViewController.xib in Resources */,
+				BFB885C42943257E00C6B820 /* DetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,12 +383,15 @@
 				BFB8859F29425D7400C6B820 /* NetworkError.swift in Sources */,
 				BFB885AF29426D4000C6B820 /* CurrencyDataModel.swift in Sources */,
 				BFB885B42942766E00C6B820 /* HomeViewController.swift in Sources */,
+				BFB885C62943259400C6B820 /* DetailsViewModel.swift in Sources */,
 				BFB885A7294260E200C6B820 /* NetworkManager+Fixer.swift in Sources */,
 				BFB885BE294322BD00C6B820 /* Loader.swift in Sources */,
 				BFB8859D29425D5C00C6B820 /* NetworkResponse.swift in Sources */,
 				BFB8859829425D0F00C6B820 /* NetworkManager+ParseResponse.swift in Sources */,
+				BFB885C82943262500C6B820 /* BaseViewModelProtocol.swift in Sources */,
 				BFB885A129425D8A00C6B820 /* MetaData.swift in Sources */,
 				BF7119D129424AAE00BB95D1 /* AppDelegate.swift in Sources */,
+				BFB885C32943257E00C6B820 /* DetailsViewController.swift in Sources */,
 				BFB8859A29425D1F00C6B820 /* NetworkDefaults.swift in Sources */,
 				BFB885BA29431F8F00C6B820 /* BaseViewController.swift in Sources */,
 				BFB885A9294262D300C6B820 /* AppDelegate+Extension.swift in Sources */,
