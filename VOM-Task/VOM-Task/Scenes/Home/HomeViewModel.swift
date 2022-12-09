@@ -7,7 +7,7 @@
 
 import Foundation
 
-typealias BlockWithMessageAndBool = (String? , Bool)->Void
+typealias BlockWithMessageAndBool = (String?, Bool) -> Void
 
 protocol HomeViewModelProtocol: BaseViewModelProtocol {
     func getCurrencyRates(currency: String, completion: @escaping BlockWithMessageAndBool)
@@ -23,7 +23,7 @@ class HomeViewModel: HomeViewModelProtocol {
     func getCurrencyRates(currency: String, completion: @escaping BlockWithMessageAndBool) {
         
         NetworkManager.shared
-            .getCurrencyRates(currency: "USD",
+            .getCurrencyRates(currency: currency,
                               completion: {[weak self] (result: Result<CurrencyDataModel, NetworkError>, _) in
                 
                 switch result {
@@ -31,7 +31,7 @@ class HomeViewModel: HomeViewModelProtocol {
                     print("data \(data)")
                     self?.currancyData = data
                     
-                    self?.currencyList = self?.currancyData?.results.compactMap({ element in
+                    self?.currencyList = self?.currancyData?.rates.compactMap({ element in
                         CurrencyModel(key: element.key, value: element.value)
                     })
                     

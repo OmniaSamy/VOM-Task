@@ -10,12 +10,12 @@ import Foundation
 struct CurrencyDataModel: Codable {
     
     var baseCurrency: String?
-    var results: [String: Double]
+    var rates: [String: Double]
     
     enum CodingKeys: String, CodingKey {
         
         case baseCurrency = "base"
-        case results = "results"
+        case rates = "rates"
     }
 }
 

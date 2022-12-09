@@ -11,7 +11,7 @@ import IQKeyboardManagerSwift
 extension AppDelegate {
     
     func initNetwork() {
-        let defaults = NetworkDefaults(baseUrl: "https://api.fastforex.io", apiKey: "de9f2b96fd-dccb787cb9-rml3h9")
+        let defaults = NetworkDefaults(baseUrl: "https://api.apilayer.com", apiKey: "H5HkOdR9nLog0zgJr9gPhlp8qQhggX41")
         NetworkManager.shared = NetworkManager(config: defaults)
     }
     

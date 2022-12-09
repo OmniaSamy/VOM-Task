@@ -8,7 +8,8 @@
 import Foundation
 import Moya
 
-//https://api.fastforex.io/fetch-all?api_key=YOUR_API_KEY
+//https://api.apilayer.com/fixer/latest
+
 enum CurrencyService {
     case getCurrencyRates(currency: String)
 }
@@ -22,7 +23,7 @@ extension CurrencyService: TargetType {
     var path: String {
         switch self {
         case .getCurrencyRates:
-            return "/fetch-all"
+            return "/fixer/latest"
         }
     }
     
@@ -42,8 +43,7 @@ extension CurrencyService: TargetType {
         switch self {
             
         case .getCurrencyRates(let currency):
-            return .requestParameters(parameters: ["from": currency,
-                                                   "api_key": NetworkManager.networkConfig.apiKey], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["base": currency], encoding: URLEncoding.default)
         }
     }
     

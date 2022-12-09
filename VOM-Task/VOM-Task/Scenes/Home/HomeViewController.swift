@@ -20,7 +20,7 @@ class HomeViewController: BaseViewController {
         // Do any additional setup after loading the view.
         
         setUpScreenDesign()
-        getData()
+        getCurrancyRates(currency: "USD")
     }
     
     init(viewModel: HomeViewModel) {
@@ -33,6 +33,7 @@ class HomeViewController: BaseViewController {
     }
 }
 
+
 extension HomeViewController {
     
     private func setUpScreenDesign() {
@@ -42,10 +43,10 @@ extension HomeViewController {
                            forCellReuseIdentifier: CurrencyTableViewCell.className)
     }
     
-    private func getData() {
+    private func getCurrancyRates(currency: String) {
         
         self.showLoadingIndicator(view: self.view, type: .native)
-        viewModel?.getCurrencyRates(currency: "USD",
+        viewModel?.getCurrencyRates(currency: currency,
                                     completion: {[weak self] (msg, success) in
             guard let self = self else { return }
             self.hideLoadingIndicator()
