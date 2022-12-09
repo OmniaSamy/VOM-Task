@@ -28,9 +28,11 @@ solution:
      B. iterative approach
      
   solution: 
-       A. recursive approach
-       ```
-        func generateFibonacciRecursive(n: Int) -> [Int] {
+       
+        A. recursive approach
+       
+ ```
+  func generateFibonacciRecursive(n: Int) -> [Int] {
         
         var result: [Int] = []
         
@@ -47,12 +49,13 @@ solution:
             }
         }
         return result
-    }
-       ```
+   }
+  ```
+       
        B. iterative approach
        
-        ```
+  ```
         
-        ```
+  ```
        
   
