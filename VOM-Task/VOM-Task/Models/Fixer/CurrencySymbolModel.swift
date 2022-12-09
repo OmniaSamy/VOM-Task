@@ -20,4 +20,9 @@ struct CurrencySymbolModel: Codable {
 struct CurrencyModel: Codable {
     var key: String?
     var value: String?
+    
+    init(key: String? , value: String? = nil) {
+        self.key = key
+        self.value = value
+    }
 }

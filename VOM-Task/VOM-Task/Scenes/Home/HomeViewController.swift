@@ -76,6 +76,7 @@ extension HomeViewController {
         currencyDropDowm.selectionAction = { [weak self] (index, item) in
             guard let self = self else { return }
             self.baseCurrancyLabel.text = item
+            self.baseCurrancyFalgImageView.image = UIImage(named: currencyList[index].key ?? "")
             self.viewModel?.selectedBaseCurrency = currencyList[index]
             self.getCurrancyRates()
         }
@@ -138,9 +139,10 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let currency = viewModel?.currencyRateList?[indexPath.row] else { return }
+        guard let rateCurrency = viewModel?.currencyRateList?[indexPath.row],
+              let baseCurrency = viewModel?.selectedBaseCurrency else { return }
         
-        let viewModel = DetailsViewModel()
+        let viewModel = DetailsViewModel(baseCurrency: baseCurrency, selectedCurrencyRate: rateCurrency)
         let viewController = DetailsViewController(viewModel: viewModel)
         self.navigationController?.pushViewController(viewController, animated: true)
     }

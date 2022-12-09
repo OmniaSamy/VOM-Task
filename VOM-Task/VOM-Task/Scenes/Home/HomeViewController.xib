@@ -31,7 +31,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XXa-nf-lsN" userLabel="selecte currancy View">
                                     <rect key="frame" x="125.00000000000001" y="20" width="140.33333333333337" height="60"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="C2s-8z-gWL">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="USD" translatesAutoresizingMaskIntoConstraints="NO" id="C2s-8z-gWL">
                                             <rect key="frame" x="20" y="10" width="40" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="40" id="FfS-xk-ac0"/>
@@ -103,7 +103,7 @@
         </tapGestureRecognizer>
     </objects>
     <resources>
-        <image name="placeholder_Icon" width="91.666664123535156" height="91.666664123535156"/>
+        <image name="USD" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -8,14 +8,26 @@
 import Foundation
 
 protocol DetailsViewModelProtocol: BaseViewModelProtocol {
-//    func getCurrencyRates(currency: String, completion: @escaping BlockWithMessageAndBool)
-//    var currancyData: CurrencyDataModel? { set get }
+    func convertCurrency(completion: @escaping BlockWithMessageAndBool)
+    var selectedCurrencyRate: CurrencyRateModel? { set get }
+    var baseCurrency: CurrencyModel? { set get }
 }
 
 class DetailsViewModel: DetailsViewModelProtocol {
     
-//    var currancyData: CurrencyDataModel?
+    var selectedCurrencyRate: CurrencyRateModel?
+    var baseCurrency: CurrencyModel?
     
+    init(baseCurrency: CurrencyModel, selectedCurrencyRate: CurrencyRateModel) {
+        self.baseCurrency = baseCurrency
+        self.selectedCurrencyRate = selectedCurrencyRate
+    }
+    
+
+    func convertCurrency(completion: @escaping BlockWithMessageAndBool) {
+        
+        
+    }
 //    func getCurrencyRates(currency: String, completion: @escaping BlockWithMessageAndBool) {
 //
 //        NetworkManager.shared

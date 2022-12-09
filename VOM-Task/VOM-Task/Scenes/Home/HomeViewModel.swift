@@ -19,7 +19,7 @@ protocol HomeViewModelProtocol: BaseViewModelProtocol {
     var currancySymbolsData: CurrencySymbolModel? { set get }
     var currancySymbolsList: [CurrencyModel]? { set get }
     
-    var selectedBaseCurrency: CurrencyModel? { set get }
+    var selectedBaseCurrency: CurrencyModel! { set get }
 }
 
 class HomeViewModel: HomeViewModelProtocol {
@@ -30,7 +30,10 @@ class HomeViewModel: HomeViewModelProtocol {
     var currancySymbolsData: CurrencySymbolModel?
     var currancySymbolsList: [CurrencyModel]?
     
-    var selectedBaseCurrency: CurrencyModel?
+    var selectedBaseCurrency: CurrencyModel! = CurrencyModel(key: "USD")
+    
+    init() {
+    }
     
     func getCurrencyRates(completion: @escaping BlockWithMessageAndBool) {
         
