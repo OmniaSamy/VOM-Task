@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="VOM_Task" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="CKj-qJ-hGQ" id="cKo-7g-O8W"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,19 +29,20 @@
                                 <constraint firstAttribute="height" constant="100" id="BTj-ga-Pdi"/>
                             </constraints>
                         </view>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9eC-GG-Jbe">
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CKj-qJ-hGQ">
                             <rect key="frame" x="0.0" y="100" width="390" height="663"/>
-                        </stackView>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </tableView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="bsm-yo-0Ni" secondAttribute="trailing" id="42f-ol-vtq"/>
                         <constraint firstItem="bsm-yo-0Ni" firstAttribute="leading" secondItem="26Q-6g-mc4" secondAttribute="leading" id="4ik-Ia-s7d"/>
+                        <constraint firstAttribute="trailing" secondItem="CKj-qJ-hGQ" secondAttribute="trailing" id="79I-NE-gt7"/>
+                        <constraint firstItem="CKj-qJ-hGQ" firstAttribute="leading" secondItem="26Q-6g-mc4" secondAttribute="leading" id="7cO-Ii-WLW"/>
+                        <constraint firstAttribute="bottom" secondItem="CKj-qJ-hGQ" secondAttribute="bottom" id="L95-o2-KkJ"/>
                         <constraint firstItem="bsm-yo-0Ni" firstAttribute="top" secondItem="26Q-6g-mc4" secondAttribute="top" id="PgS-Cn-dMa"/>
-                        <constraint firstAttribute="trailing" secondItem="9eC-GG-Jbe" secondAttribute="trailing" id="X1d-zs-Mvp"/>
-                        <constraint firstAttribute="bottom" secondItem="9eC-GG-Jbe" secondAttribute="bottom" id="YdY-9r-itO"/>
-                        <constraint firstItem="9eC-GG-Jbe" firstAttribute="leading" secondItem="26Q-6g-mc4" secondAttribute="leading" id="dyz-iJ-YKv"/>
-                        <constraint firstItem="9eC-GG-Jbe" firstAttribute="top" secondItem="bsm-yo-0Ni" secondAttribute="bottom" id="zhY-8a-c4f"/>
+                        <constraint firstItem="CKj-qJ-hGQ" firstAttribute="top" secondItem="bsm-yo-0Ni" secondAttribute="bottom" id="zfn-bL-mlW"/>
                     </constraints>
                 </view>
             </subviews>

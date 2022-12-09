@@ -9,6 +9,9 @@ import UIKit
 
 class HomeViewController: BaseViewController {
     
+    
+    @IBOutlet private weak var tableView: UITableView!
+    
     var viewModel: HomeViewModelProtocol?
     
     override func viewDidLoad() {
@@ -16,6 +19,7 @@ class HomeViewController: BaseViewController {
         
         // Do any additional setup after loading the view.
         
+        setUpScreenDesign()
         getData()
     }
     
@@ -31,6 +35,13 @@ class HomeViewController: BaseViewController {
 
 extension HomeViewController {
     
+    private func setUpScreenDesign() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: CurrencyTableViewCell.className, bundle: nil),
+                           forCellReuseIdentifier: CurrencyTableViewCell.className)
+    }
+    
     private func getData() {
         
         self.showLoadingIndicator(view: self.view, type: .native)
@@ -40,10 +51,40 @@ extension HomeViewController {
             self.hideLoadingIndicator()
             
             if success {
-                
+                self.bindData()
             } else {
                 
             }
         })
+    }
+    
+    private func bindData() {
+        tableView.reloadData()
+    }
+}
+
+extension HomeViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel?.currencyList?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CurrencyTableViewCell.className,
+                                                       for: indexPath) as? CurrencyTableViewCell else {
+            return UITableViewCell()
+        }
+        guard let currency = viewModel?.currencyList?[indexPath.row] else { return UITableViewCell() }
+        cell.bind(currency: currency)
+        return cell
+    }
+}
+
+extension HomeViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let currency = viewModel?.currencyList?[indexPath.row] else { return }
+        
     }
 }

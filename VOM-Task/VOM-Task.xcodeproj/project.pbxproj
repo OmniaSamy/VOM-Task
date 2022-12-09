@@ -21,7 +21,6 @@
 		BFB885A5294260B200C6B820 /* FixerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885A4294260B200C6B820 /* FixerService.swift */; };
 		BFB885A7294260E200C6B820 /* NetworkManager+Fixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885A6294260E200C6B820 /* NetworkManager+Fixer.swift */; };
 		BFB885A9294262D300C6B820 /* AppDelegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885A8294262D300C6B820 /* AppDelegate+Extension.swift */; };
-		BFB885AD29426C8200C6B820 /* ResultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885AC29426C8200C6B820 /* ResultsModel.swift */; };
 		BFB885AF29426D4000C6B820 /* CurrencyDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885AE29426D4000C6B820 /* CurrencyDataModel.swift */; };
 		BFB885B42942766E00C6B820 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885B22942766E00C6B820 /* HomeViewController.swift */; };
 		BFB885B52942766E00C6B820 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFB885B32942766E00C6B820 /* HomeViewController.xib */; };
@@ -33,6 +32,9 @@
 		BFB885C42943257E00C6B820 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFB885C22943257E00C6B820 /* DetailsViewController.xib */; };
 		BFB885C62943259400C6B820 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885C52943259400C6B820 /* DetailsViewModel.swift */; };
 		BFB885C82943262500C6B820 /* BaseViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885C72943262500C6B820 /* BaseViewModelProtocol.swift */; };
+		BFB885CC29432BF400C6B820 /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885CA29432BF400C6B820 /* CurrencyTableViewCell.swift */; };
+		BFB885CD29432BF400C6B820 /* CurrencyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFB885CB29432BF400C6B820 /* CurrencyTableViewCell.xib */; };
+		BFB885D029432C4400C6B820 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885CF29432C4400C6B820 /* NSObject+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,7 +56,6 @@
 		BFB885A4294260B200C6B820 /* FixerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixerService.swift; sourceTree = "<group>"; };
 		BFB885A6294260E200C6B820 /* NetworkManager+Fixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+Fixer.swift"; sourceTree = "<group>"; };
 		BFB885A8294262D300C6B820 /* AppDelegate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Extension.swift"; sourceTree = "<group>"; };
-		BFB885AC29426C8200C6B820 /* ResultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsModel.swift; sourceTree = "<group>"; };
 		BFB885AE29426D4000C6B820 /* CurrencyDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDataModel.swift; sourceTree = "<group>"; };
 		BFB885B22942766E00C6B820 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BFB885B32942766E00C6B820 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -66,6 +67,9 @@
 		BFB885C22943257E00C6B820 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
 		BFB885C52943259400C6B820 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		BFB885C72943262500C6B820 /* BaseViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelProtocol.swift; sourceTree = "<group>"; };
+		BFB885CA29432BF400C6B820 /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
+		BFB885CB29432BF400C6B820 /* CurrencyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyTableViewCell.xib; sourceTree = "<group>"; };
+		BFB885CF29432C4400C6B820 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 				BFB8859329425A2300C6B820 /* Resources */,
 				BFB8859429425C5800C6B820 /* NetworkServices */,
 				BFB8859B29425D4700C6B820 /* Models */,
+				BFB885CE29432C3600C6B820 /* Extension */,
 				BFB885B829431F7F00C6B820 /* Base */,
 				BFB885BB294322A900C6B820 /* Custom */,
 				BFB885AA2942651A00C6B820 /* Scenes */,
@@ -199,7 +204,6 @@
 		BFB885AB29426B7600C6B820 /* Fixer */ = {
 			isa = PBXGroup;
 			children = (
-				BFB885AC29426C8200C6B820 /* ResultsModel.swift */,
 				BFB885AE29426D4000C6B820 /* CurrencyDataModel.swift */,
 			);
 			path = Fixer;
@@ -208,6 +212,7 @@
 		BFB885B0294271B300C6B820 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				BFB885C929432BE000C6B820 /* Cell */,
 				BFB885B22942766E00C6B820 /* HomeViewController.swift */,
 				BFB885B32942766E00C6B820 /* HomeViewController.xib */,
 				BFB885B62942767D00C6B820 /* HomeViewModel.swift */,
@@ -249,6 +254,23 @@
 				BFB885BF294322F100C6B820 /* LoaderProtocol.swift */,
 			);
 			path = Loader;
+			sourceTree = "<group>";
+		};
+		BFB885C929432BE000C6B820 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BFB885CA29432BF400C6B820 /* CurrencyTableViewCell.swift */,
+				BFB885CB29432BF400C6B820 /* CurrencyTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BFB885CE29432C3600C6B820 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BFB885CF29432C4400C6B820 /* NSObject+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		F1372F8193E10EB86711DAF0 /* Pods */ = {
@@ -321,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF7119DD29424AB100BB95D1 /* LaunchScreen.storyboard in Resources */,
+				BFB885CD29432BF400C6B820 /* CurrencyTableViewCell.xib in Resources */,
 				BF7119DA29424AB100BB95D1 /* Assets.xcassets in Resources */,
 				BFB885B52942766E00C6B820 /* HomeViewController.xib in Resources */,
 				BFB885C42943257E00C6B820 /* DetailsViewController.xib in Resources */,
@@ -376,9 +399,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFB885AD29426C8200C6B820 /* ResultsModel.swift in Sources */,
 				BFB885A5294260B200C6B820 /* FixerService.swift in Sources */,
 				BFB8859629425C7100C6B820 /* NetworkManager.swift in Sources */,
+				BFB885D029432C4400C6B820 /* NSObject+Extension.swift in Sources */,
 				BFB885B72942767D00C6B820 /* HomeViewModel.swift in Sources */,
 				BFB8859F29425D7400C6B820 /* NetworkError.swift in Sources */,
 				BFB885AF29426D4000C6B820 /* CurrencyDataModel.swift in Sources */,
@@ -392,6 +415,7 @@
 				BFB885A129425D8A00C6B820 /* MetaData.swift in Sources */,
 				BF7119D129424AAE00BB95D1 /* AppDelegate.swift in Sources */,
 				BFB885C32943257E00C6B820 /* DetailsViewController.swift in Sources */,
+				BFB885CC29432BF400C6B820 /* CurrencyTableViewCell.swift in Sources */,
 				BFB8859A29425D1F00C6B820 /* NetworkDefaults.swift in Sources */,
 				BFB885BA29431F8F00C6B820 /* BaseViewController.swift in Sources */,
 				BFB885A9294262D300C6B820 /* AppDelegate+Extension.swift in Sources */,
