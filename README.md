@@ -13,7 +13,8 @@ true. You can use any parentheses you’d like.
 (examples of anagrams: debit card/bad credit, etc.)
 
 solution: 
-    func anagramChecker(string1: String, string2: String) -> Bool {
+   
+   func anagramChecker(string1: String, string2: String) -> Bool {
         
         if string1.count != string2.count {
             return false
