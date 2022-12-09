@@ -19,7 +19,7 @@ struct CurrencyDataModel: Codable {
     }
 }
 
-struct CurrencyModel: Codable {
+struct CurrencyRateModel: Codable {
     
     var key: String?
     var value: Double?

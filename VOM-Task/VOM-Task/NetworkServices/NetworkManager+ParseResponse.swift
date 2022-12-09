@@ -10,15 +10,15 @@ import Moya
 
 extension NetworkManager {
     
-    func parseResponse(moyaResult: MoyaCompletion,
-                                   completion: @escaping(NetworkCompletion<CurrencyDataModel>)) {
+    func parseResponse<T: Codable>(moyaResult: MoyaCompletion,
+                                   completion: @escaping(NetworkCompletion<T>)) {
         
         switch moyaResult {
         case .success(let response):
             
             if (200...299 ~= response.statusCode) {
                 do {
-                    let result = try JSONDecoder().decode(CurrencyDataModel.self, from: response.data)
+                    let result = try JSONDecoder().decode(T.self, from: response.data)
                     completion(.success(result), response.statusCode)
                 } catch {
                     completion(.failure(NetworkError(error: error)), response.statusCode)

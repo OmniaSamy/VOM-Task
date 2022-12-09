@@ -9,6 +9,7 @@ import UIKit
 
 class HomeViewController: BaseViewController {
     
+    // MARK: - IBOutlets
     
     @IBOutlet private weak var tableView: UITableView!
     
@@ -20,6 +21,7 @@ class HomeViewController: BaseViewController {
         // Do any additional setup after loading the view.
         
         setUpScreenDesign()
+        getCurrancySymbols()
         getCurrancyRates(currency: "USD")
     }
     
@@ -33,7 +35,7 @@ class HomeViewController: BaseViewController {
     }
 }
 
-
+// MARK: - Private
 extension HomeViewController {
     
     private func setUpScreenDesign() {
@@ -59,15 +61,31 @@ extension HomeViewController {
         })
     }
     
+    private func getCurrancySymbols() {
+        
+        self.showLoadingIndicator(view: self.view, type: .native)
+        viewModel?.getCurrancySymbols(completion: {[weak self] (msg, success) in
+            guard let self = self else { return }
+            self.hideLoadingIndicator()
+            
+            if success {
+//                self.bindData()
+            } else {
+                
+            }
+        })
+    }
+    
     private func bindData() {
         tableView.reloadData()
     }
 }
 
+// MARK: - TableView DataSource
 extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel?.currencyList?.count ?? 0
+        return viewModel?.currencyRateList?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -76,16 +94,21 @@ extension HomeViewController: UITableViewDataSource {
                                                        for: indexPath) as? CurrencyTableViewCell else {
             return UITableViewCell()
         }
-        guard let currency = viewModel?.currencyList?[indexPath.row] else { return UITableViewCell() }
+        guard let currency = viewModel?.currencyRateList?[indexPath.row] else { return UITableViewCell() }
         cell.bind(currency: currency)
         return cell
     }
 }
 
+// MARK: - TableView Delegate
 extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let currency = viewModel?.currencyList?[indexPath.row] else { return }
+        guard let currency = viewModel?.currencyRateList?[indexPath.row] else { return }
         
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
     }
 }

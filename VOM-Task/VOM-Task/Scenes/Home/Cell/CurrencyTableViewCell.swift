@@ -18,7 +18,7 @@ class CurrencyTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    func bind(currency: CurrencyModel) {
+    func bind(currency: CurrencyRateModel) {
 //    currencyImageView
         //placeholder_Icon
         currencyNameLabel.text = currency.key

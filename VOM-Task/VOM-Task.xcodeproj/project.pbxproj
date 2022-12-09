@@ -35,6 +35,7 @@
 		BFB885CC29432BF400C6B820 /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885CA29432BF400C6B820 /* CurrencyTableViewCell.swift */; };
 		BFB885CD29432BF400C6B820 /* CurrencyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFB885CB29432BF400C6B820 /* CurrencyTableViewCell.xib */; };
 		BFB885D029432C4400C6B820 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885CF29432C4400C6B820 /* NSObject+Extension.swift */; };
+		BFB885D229433BD600C6B820 /* CurrencySymbolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885D129433BD600C6B820 /* CurrencySymbolModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		BFB885CA29432BF400C6B820 /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
 		BFB885CB29432BF400C6B820 /* CurrencyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyTableViewCell.xib; sourceTree = "<group>"; };
 		BFB885CF29432C4400C6B820 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
+		BFB885D129433BD600C6B820 /* CurrencySymbolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySymbolModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				BFB885AE29426D4000C6B820 /* CurrencyDataModel.swift */,
+				BFB885D129433BD600C6B820 /* CurrencySymbolModel.swift */,
 			);
 			path = Fixer;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				BFB8859629425C7100C6B820 /* NetworkManager.swift in Sources */,
 				BFB885D029432C4400C6B820 /* NSObject+Extension.swift in Sources */,
 				BFB885B72942767D00C6B820 /* HomeViewModel.swift in Sources */,
+				BFB885D229433BD600C6B820 /* CurrencySymbolModel.swift in Sources */,
 				BFB8859F29425D7400C6B820 /* NetworkError.swift in Sources */,
 				BFB885AF29426D4000C6B820 /* CurrencyDataModel.swift in Sources */,
 				BFB885B42942766E00C6B820 /* HomeViewController.swift in Sources */,

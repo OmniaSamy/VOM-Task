@@ -9,9 +9,11 @@ import Foundation
 import Moya
 
 //https://api.apilayer.com/fixer/latest
+//https://api.apilayer.com/fixer/symbols
 
 enum CurrencyService {
     case getCurrencyRates(currency: String)
+    case getCurrencySymbols
 }
 
 extension CurrencyService: TargetType {
@@ -24,12 +26,16 @@ extension CurrencyService: TargetType {
         switch self {
         case .getCurrencyRates:
             return "/fixer/latest"
+        case .getCurrencySymbols:
+            return "/fixer/symbols"
         }
     }
     
     var method: Moya.Method {
         switch self {
         case .getCurrencyRates:
+            return .get
+        case .getCurrencySymbols:
             return .get
         }
     }
@@ -44,6 +50,8 @@ extension CurrencyService: TargetType {
             
         case .getCurrencyRates(let currency):
             return .requestParameters(parameters: ["base": currency], encoding: URLEncoding.default)
+        case .getCurrencySymbols:
+            return .requestPlain
         }
     }
     

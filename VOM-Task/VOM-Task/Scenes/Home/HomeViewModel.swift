@@ -11,14 +11,21 @@ typealias BlockWithMessageAndBool = (String?, Bool) -> Void
 
 protocol HomeViewModelProtocol: BaseViewModelProtocol {
     func getCurrencyRates(currency: String, completion: @escaping BlockWithMessageAndBool)
-    var currancyData: CurrencyDataModel? { set get }
-    var currencyList: [CurrencyModel]? { set get }
+    func getCurrancySymbols(completion: @escaping BlockWithMessageAndBool)
+    var currancyRatesData: CurrencyDataModel? { set get }
+    var currencyRateList: [CurrencyRateModel]? { set get }
+    
+    var currancySymbolsData: CurrencySymbolModel? { set get }
+    var currancySymbolsList: [CurrencyModel]? { set get }
 }
 
 class HomeViewModel: HomeViewModelProtocol {
     
-    var currancyData: CurrencyDataModel?
-    var currencyList: [CurrencyModel]?
+    var currancyRatesData: CurrencyDataModel?
+    var currencyRateList: [CurrencyRateModel]?
+    
+    var currancySymbolsData: CurrencySymbolModel?
+    var currancySymbolsList: [CurrencyModel]?
     
     func getCurrencyRates(currency: String, completion: @escaping BlockWithMessageAndBool) {
         
@@ -29,9 +36,31 @@ class HomeViewModel: HomeViewModelProtocol {
                 switch result {
                 case .success(let data):
                     print("data \(data)")
-                    self?.currancyData = data
+                    self?.currancyRatesData = data
                     
-                    self?.currencyList = self?.currancyData?.rates.compactMap({ element in
+                    self?.currencyRateList = self?.currancyRatesData?.rates.compactMap({ element in
+                        CurrencyRateModel(key: element.key, value: element.value)
+                    })
+                    
+                    completion("sucess", true)
+                case .failure(let error):
+                    print("error \(error)")
+                    completion(error.errorMessage(), false)
+                }
+            })
+    }
+    
+    func getCurrancySymbols(completion: @escaping BlockWithMessageAndBool) {
+        
+        NetworkManager.shared
+            .getCurrencySymbols(completion: {[weak self] (result: Result<CurrencySymbolModel, NetworkError>, _) in
+                
+                switch result {
+                case .success(let data):
+                    print("data \(data)")
+                    self?.currancySymbolsData = data
+                    
+                    self?.currancySymbolsList = self?.currancySymbolsData?.symbols.compactMap({ element in
                         CurrencyModel(key: element.key, value: element.value)
                     })
                     

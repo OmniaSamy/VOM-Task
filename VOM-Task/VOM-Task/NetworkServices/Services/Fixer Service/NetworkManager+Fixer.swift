@@ -18,4 +18,12 @@ extension NetworkManager {
             self.parseResponse(moyaResult: result, completion: completion)
         }
     }
+    
+    func getCurrencySymbols(completion: @escaping(_ result: Swift.Result<CurrencySymbolModel, NetworkError>,
+                                                _ statusCode: Int?) -> Void) {
+        
+        provider.request(MultiTarget(CurrencyService.getCurrencySymbols)) { result in
+            self.parseResponse(moyaResult: result, completion: completion)
+        }
+    }
 }

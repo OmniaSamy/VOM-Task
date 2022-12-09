@@ -14,7 +14,7 @@ import Moya
 class NetworkManager {
     
     typealias MoyaCompletion = Result<Moya.Response, MoyaError>
-    typealias NetworkCompletion<T: Codable> = (_ result: Swift.Result<CurrencyDataModel, NetworkError>,
+    typealias NetworkCompletion<T: Codable> = (_ result: Swift.Result<T, NetworkError>,
                                                _ statusCode: Int?) -> Void
     
     static var networkConfig: NetworkDefaults {

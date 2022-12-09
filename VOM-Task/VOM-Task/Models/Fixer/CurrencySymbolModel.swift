@@ -6,3 +6,18 @@
 //
 
 import Foundation
+
+struct CurrencySymbolModel: Codable {
+    
+    var symbols: [String: String]
+    
+    enum CodingKeys: String, CodingKey {
+        
+        case symbols = "symbols"
+    }
+}
+
+struct CurrencyModel: Codable {
+    var key: String?
+    var value: String?
+}
