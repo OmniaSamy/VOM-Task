@@ -8,9 +8,6 @@
 import Foundation
 import Moya
 
-// api key
-//de9f2b96fd-dccb787cb9-rml3h9
-
 class NetworkManager {
     
     typealias MoyaCompletion = Result<Moya.Response, MoyaError>

@@ -10,7 +10,8 @@ import UIKit
 class HomeViewController: BaseViewController {
     
     // MARK: - IBOutlets
-    
+    @IBOutlet private weak var baseCurrancyLabel: UILabel!
+    @IBOutlet private weak var baseCurrancyFalgeImageView: UIImageView!
     @IBOutlet private weak var tableView: UITableView!
     
     var viewModel: HomeViewModelProtocol?
@@ -32,6 +33,14 @@ class HomeViewController: BaseViewController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+// MARK: - IBActions
+extension HomeViewController {
+    
+    @IBAction func baseCurrancyTapped(_ sender: Any) {
+        
     }
 }
 
@@ -69,7 +78,7 @@ extension HomeViewController {
             self.hideLoadingIndicator()
             
             if success {
-//                self.bindData()
+                //                self.bindData()
             } else {
                 
             }

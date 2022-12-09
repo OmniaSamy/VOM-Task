@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="VOM_Task" customModuleProvider="target">
             <connections>
+                <outlet property="baseCurrancyFalgeImageView" destination="C2s-8z-gWL" id="6I5-Y7-w5h"/>
+                <outlet property="baseCurrancyLabel" destination="Sei-co-R2f" id="yob-cn-3W7"/>
                 <outlet property="tableView" destination="CKj-qJ-hGQ" id="cKo-7g-O8W"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -24,9 +26,46 @@
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bsm-yo-0Ni" userLabel="base currency View">
                             <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XXa-nf-lsN" userLabel="selecte currancy View">
+                                    <rect key="frame" x="125.00000000000001" y="20" width="140.33333333333337" height="60"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="C2s-8z-gWL">
+                                            <rect key="frame" x="20" y="10" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="FfS-xk-ac0"/>
+                                                <constraint firstAttribute="height" constant="40" id="i5x-cs-S42"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sei-co-R2f">
+                                            <rect key="frame" x="80" y="18" width="40.333333333333343" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <gestureRecognizers/>
+                                    <constraints>
+                                        <constraint firstItem="C2s-8z-gWL" firstAttribute="leading" secondItem="XXa-nf-lsN" secondAttribute="leading" constant="20" id="Ag3-Yu-OTY"/>
+                                        <constraint firstItem="C2s-8z-gWL" firstAttribute="top" secondItem="XXa-nf-lsN" secondAttribute="top" constant="10" id="Bik-RI-pHx"/>
+                                        <constraint firstAttribute="bottom" secondItem="C2s-8z-gWL" secondAttribute="bottom" constant="10" id="Zm2-75-Ik0"/>
+                                        <constraint firstItem="Sei-co-R2f" firstAttribute="leading" secondItem="C2s-8z-gWL" secondAttribute="trailing" constant="20" id="bHB-q8-8gk"/>
+                                        <constraint firstItem="Sei-co-R2f" firstAttribute="centerY" secondItem="C2s-8z-gWL" secondAttribute="centerY" id="o6Q-c7-ZQw"/>
+                                        <constraint firstAttribute="trailing" secondItem="Sei-co-R2f" secondAttribute="trailing" constant="20" id="zay-y5-YMs"/>
+                                    </constraints>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="3dn-Hw-6OI" appends="YES" id="dsS-1v-wUo"/>
+                                    </connections>
+                                </view>
+                            </subviews>
                             <color key="backgroundColor" systemColor="systemCyanColor"/>
                             <constraints>
+                                <constraint firstItem="XXa-nf-lsN" firstAttribute="top" secondItem="bsm-yo-0Ni" secondAttribute="top" constant="20" id="0oA-Ms-Ngi"/>
+                                <constraint firstItem="XXa-nf-lsN" firstAttribute="centerY" secondItem="bsm-yo-0Ni" secondAttribute="centerY" id="1cS-av-bSv"/>
+                                <constraint firstAttribute="bottom" secondItem="XXa-nf-lsN" secondAttribute="bottom" constant="20" id="4Y2-wR-Tyk"/>
                                 <constraint firstAttribute="height" constant="100" id="BTj-ga-Pdi"/>
+                                <constraint firstItem="XXa-nf-lsN" firstAttribute="centerX" secondItem="bsm-yo-0Ni" secondAttribute="centerX" id="o7J-mK-J3Y"/>
                             </constraints>
                         </view>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CKj-qJ-hGQ">
@@ -56,8 +95,14 @@
             </constraints>
             <point key="canvasLocation" x="88" y="21"/>
         </view>
+        <tapGestureRecognizer id="3dn-Hw-6OI" userLabel="base Tap Gesture Recognizer">
+            <connections>
+                <action selector="baseCurrancyTapped:" destination="-1" id="cyP-mO-lN7"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
+        <image name="placeholder_Icon" width="91.666664123535156" height="91.666664123535156"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
