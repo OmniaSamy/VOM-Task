@@ -6,15 +6,19 @@
 //
 
 import UIKit
+import DropDown
 
 class HomeViewController: BaseViewController {
     
     // MARK: - IBOutlets
+    @IBOutlet private weak var baseCurrencyView: UIView!
     @IBOutlet private weak var baseCurrancyLabel: UILabel!
-    @IBOutlet private weak var baseCurrancyFalgeImageView: UIImageView!
+    @IBOutlet private weak var baseCurrancyFalgImageView: UIImageView!
     @IBOutlet private weak var tableView: UITableView!
     
     var viewModel: HomeViewModelProtocol?
+    
+    private let currencyDropDowm = DropDown()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +27,7 @@ class HomeViewController: BaseViewController {
         
         setUpScreenDesign()
         getCurrancySymbols()
-        getCurrancyRates(currency: "USD")
+        getCurrancyRates()
     }
     
     init(viewModel: HomeViewModel) {
@@ -40,7 +44,7 @@ class HomeViewController: BaseViewController {
 extension HomeViewController {
     
     @IBAction func baseCurrancyTapped(_ sender: Any) {
-        
+        currencyDropDowm.show()
     }
 }
 
@@ -54,14 +58,35 @@ extension HomeViewController {
                            forCellReuseIdentifier: CurrencyTableViewCell.className)
     }
     
-    private func getCurrancyRates(currency: String) {
+    private func setUpCurrencyDropDown() {
+        currencyDropDowm.anchorView = baseCurrencyView
+        currencyDropDowm.bottomOffset = CGPoint(x: 0, y: baseCurrencyView.bounds.height)
+        
+        let currencyList = viewModel?.currancySymbolsList ?? []
+        var currencyDropDownDataSource = [String]()
+        
+        for currency in currencyList {
+            currencyDropDownDataSource.append(currency.key ?? "")
+        }
+        
+        currencyDropDowm.dataSource = currencyDropDownDataSource
+        
+        // Action triggered on selection
+        currencyDropDowm.selectionAction = { [weak self] (index, item) in
+            guard let self = self else { return }
+            self.baseCurrancyLabel.text = item
+            self.viewModel?.selectedBaseCurrency = currencyList[index]
+            self.getCurrancyRates()
+        }
+    }
+    
+    private func getCurrancyRates() {
         
         self.showLoadingIndicator(view: self.view, type: .native)
-        viewModel?.getCurrencyRates(currency: currency,
-                                    completion: {[weak self] (msg, success) in
+        
+        viewModel?.getCurrencyRates(completion: {[weak self] (msg, success) in
             guard let self = self else { return }
             self.hideLoadingIndicator()
-            
             if success {
                 self.bindData()
             } else {
@@ -78,7 +103,7 @@ extension HomeViewController {
             self.hideLoadingIndicator()
             
             if success {
-                //                self.bindData()
+                self.setUpCurrencyDropDown()
             } else {
                 
             }

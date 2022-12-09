@@ -10,8 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="VOM_Task" customModuleProvider="target">
             <connections>
-                <outlet property="baseCurrancyFalgeImageView" destination="C2s-8z-gWL" id="6I5-Y7-w5h"/>
+                <outlet property="baseCurrancyFalgImageView" destination="C2s-8z-gWL" id="EeC-y9-maa"/>
                 <outlet property="baseCurrancyLabel" destination="Sei-co-R2f" id="yob-cn-3W7"/>
+                <outlet property="baseCurrencyView" destination="XXa-nf-lsN" id="ls3-9i-kkU"/>
                 <outlet property="tableView" destination="CKj-qJ-hGQ" id="cKo-7g-O8W"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

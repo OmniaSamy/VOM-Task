@@ -10,13 +10,16 @@ import Foundation
 typealias BlockWithMessageAndBool = (String?, Bool) -> Void
 
 protocol HomeViewModelProtocol: BaseViewModelProtocol {
-    func getCurrencyRates(currency: String, completion: @escaping BlockWithMessageAndBool)
+    func getCurrencyRates(completion: @escaping BlockWithMessageAndBool)
     func getCurrancySymbols(completion: @escaping BlockWithMessageAndBool)
+    
     var currancyRatesData: CurrencyDataModel? { set get }
     var currencyRateList: [CurrencyRateModel]? { set get }
     
     var currancySymbolsData: CurrencySymbolModel? { set get }
     var currancySymbolsList: [CurrencyModel]? { set get }
+    
+    var selectedBaseCurrency: CurrencyModel? { set get }
 }
 
 class HomeViewModel: HomeViewModelProtocol {
@@ -27,10 +30,12 @@ class HomeViewModel: HomeViewModelProtocol {
     var currancySymbolsData: CurrencySymbolModel?
     var currancySymbolsList: [CurrencyModel]?
     
-    func getCurrencyRates(currency: String, completion: @escaping BlockWithMessageAndBool) {
+    var selectedBaseCurrency: CurrencyModel?
+    
+    func getCurrencyRates(completion: @escaping BlockWithMessageAndBool) {
         
         NetworkManager.shared
-            .getCurrencyRates(currency: currency,
+            .getCurrencyRates(currency: selectedBaseCurrency?.key ?? "USD",
                               completion: {[weak self] (result: Result<CurrencyDataModel, NetworkError>, _) in
                 
                 switch result {
