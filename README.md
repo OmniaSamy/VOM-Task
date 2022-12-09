@@ -29,7 +29,7 @@ solution:
      
   solution: 
        
-        A. recursive approach
+       A. recursive approach
        
  ```
   func generateFibonacciRecursive(n: Int) -> [Int] {
@@ -52,9 +52,28 @@ solution:
    }
   ```
        
-       B. iterative approach
+      B. iterative approach
        
-  ```
+  ``` 
+  func generateFibonacciIterative(n: Int) -> Int {
+        
+     var n1 = 0
+     var n2 = 1
+     var temp = 0
+     for _ in 0..<n {
+        temp = n1
+        n1 = n2
+        n2 = temp + n2
+      }
+     return n1
+    }
+    
+     var n = 10
+     var result: [Int] = []
+     for i in 0...n {
+        result.append(generateFibonacciIterative(n: i))
+     }
+     print(result)
         
   ```
        
