@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return
         }
         self.window = UIWindow(windowScene: windowScene)
-        let viewc = HomeViewController() //Container.Auth.getLoginInScreen()
+        let viewc = HomeViewController(viewModel: HomeViewModel()) //Container.Auth.getLoginInScreen()
 //        AppManager.shared.setRootView(viewController: Container.embedVCInNavController(viewc))
         window?.rootViewController = viewc
         self.window?.makeKeyAndVisible()
