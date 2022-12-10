@@ -1,3 +1,45 @@
-PODFILE CHECKSUM: e70d118f34b8e8036d90a47285b922b39cd3e73c
+PODS:
+  - Alamofire (5.6.2)
+  - AlamofireImage (4.2.0):
+    - Alamofire (~> 5.4)
+  - DropDown (2.3.13)
+  - IQKeyboardManagerSwift (6.5.10)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - SKCountryPicker (2.0.0)
+  - SwiftMessages (9.0.6):
+    - SwiftMessages/App (= 9.0.6)
+  - SwiftMessages/App (9.0.6)
+
+DEPENDENCIES:
+  - AlamofireImage
+  - DropDown
+  - IQKeyboardManagerSwift
+  - Moya
+  - SKCountryPicker
+  - SwiftMessages
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireImage
+    - DropDown
+    - IQKeyboardManagerSwift
+    - Moya
+    - SKCountryPicker
+    - SwiftMessages
+
+SPEC CHECKSUMS:
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
+  AlamofireImage: 34a2d90b0e5fe6a5605f85ae4b7b01e784c60192
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  SKCountryPicker: 9d4921503cad7224a14a150802bb71228adbd90f
+  SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
+
+PODFILE CHECKSUM: 3839f416a2db3eed5e7490fb7da8963cc8044f82
 
 COCOAPODS: 1.11.3
