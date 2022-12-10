@@ -58,6 +58,12 @@ extension HomeViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: CurrencyTableViewCell.className, bundle: nil),
                            forCellReuseIdentifier: CurrencyTableViewCell.className)
+        
+        guard let country = CountryConverter.codeToCountry[self.viewModel?.selectedBaseCurrency.key ?? ""] else {
+            self.baseCurrancyFalgImageView.image = UIImage(named: "placeholder_Icon")
+            return
+        }
+        self.baseCurrancyFalgImageView.image = CountryManager.shared.country(withName: country)?.flag
     }
     
     private func setUpCurrencyDropDown() {
