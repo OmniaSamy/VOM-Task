@@ -11,7 +11,7 @@ import IQKeyboardManagerSwift
 extension AppDelegate {
     
     func initNetwork() {
-        let defaults = NetworkDefaults(baseUrl: "https://api.apilayer.com", apiKey: "H5HkOdR9nLog0zgJr9gPhlp8qQhggX41")
+        let defaults = NetworkDefaults(baseUrl: "https://api.apilayer.com", apiKey: "NqDtmp2D5333rujRRm4WB2RP0kJa4nmZ")
         NetworkManager.shared = NetworkManager(config: defaults)
     }
     

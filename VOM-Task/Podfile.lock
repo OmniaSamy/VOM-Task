@@ -8,6 +8,7 @@ PODS:
     - Moya/Core (= 15.0.0)
   - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
+  - SKCountryPicker (2.0.0)
   - SwiftMessages (9.0.6):
     - SwiftMessages/App (= 9.0.6)
   - SwiftMessages/App (9.0.6)
@@ -17,6 +18,7 @@ DEPENDENCIES:
   - DropDown
   - IQKeyboardManagerSwift
   - Moya
+  - SKCountryPicker
   - SwiftMessages
 
 SPEC REPOS:
@@ -26,6 +28,7 @@ SPEC REPOS:
     - DropDown
     - IQKeyboardManagerSwift
     - Moya
+    - SKCountryPicker
     - SwiftMessages
 
 SPEC CHECKSUMS:
@@ -34,8 +37,9 @@ SPEC CHECKSUMS:
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  SKCountryPicker: 9d4921503cad7224a14a150802bb71228adbd90f
   SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
 
-PODFILE CHECKSUM: 515ba6511a460c5df4a390b49e63af9a5fb57c1b
+PODFILE CHECKSUM: 3839f416a2db3eed5e7490fb7da8963cc8044f82
 
 COCOAPODS: 1.11.3

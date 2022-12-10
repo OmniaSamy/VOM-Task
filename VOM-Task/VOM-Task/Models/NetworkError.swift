@@ -13,8 +13,13 @@ struct NetworkError: Codable, Error, LocalizedError {
     
     var errors: ErrorModel?
     var type: Type?
+    var message: String?
     
-    init() { }
+    enum CodingKeys: String, CodingKey {
+        case message = "message"
+    }
+    
+    init() {  }
     
     init(error: MoyaError) {
         
@@ -35,11 +40,6 @@ struct NetworkError: Codable, Error, LocalizedError {
         }
     }
     
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        errors = try values.decodeIfPresent(ErrorModel.self, forKey: .errors)
-    }
-    
     init(error: Error) {
         print(error)
         print(error.localizedDescription)
@@ -47,18 +47,14 @@ struct NetworkError: Codable, Error, LocalizedError {
     }
     
     func errorMessage () -> String {
-        var errorString = ""
-        if let errors = errors {
-            errorString = errors.info ?? ""
-        }
-        return errorString
+        return message ?? "no message found"
     }
 }
 
 extension NetworkError {
     static let parseError: NetworkError = {
         var error = NetworkError()
-        print(error.localizedDescription)
+        print(error.message) 
         return error
     }()
     

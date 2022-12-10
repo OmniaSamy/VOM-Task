@@ -11,5 +11,6 @@ target 'VOM-Task' do
   pod 'SwiftMessages'
   pod 'IQKeyboardManagerSwift'
   pod 'DropDown'
+  pod 'SKCountryPicker'
   
 end

@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import SKCountryPicker
 
 class CurrencyTableViewCell: UITableViewCell {
-
+    
     @IBOutlet private weak var currencyImageView: UIImageView!
     @IBOutlet private weak var currencyNameLabel: UILabel!
     @IBOutlet private weak var currencyValueLabel: UILabel!
@@ -17,17 +18,20 @@ class CurrencyTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     func bind(currency: CurrencyRateModel) {
         currencyNameLabel.text = currency.key
         currencyValueLabel.text = String(currency.value ?? 0)
         
-        currencyImageView.image = UIImage(named: currency.key ?? "placeholder_Icon")
+        guard let country = CountryConverter.codeToCountry[currency.key ?? ""] else {
+            currencyImageView.image = UIImage(named: "placeholder_Icon")
+            return
+        }
+        currencyImageView.image = CountryManager.shared.country(withName: country)?.flag
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        
         currencyImageView.image = UIImage(named: "placeholder_Icon")
     }
 }

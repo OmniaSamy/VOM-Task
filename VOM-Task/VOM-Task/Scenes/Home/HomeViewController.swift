@@ -7,6 +7,7 @@
 
 import UIKit
 import DropDown
+import SKCountryPicker
 
 class HomeViewController: BaseViewController {
     
@@ -76,9 +77,14 @@ extension HomeViewController {
         currencyDropDowm.selectionAction = { [weak self] (index, item) in
             guard let self = self else { return }
             self.baseCurrancyLabel.text = item
-            self.baseCurrancyFalgImageView.image = UIImage(named: currencyList[index].key ?? "")
             self.viewModel?.selectedBaseCurrency = currencyList[index]
             self.getCurrancyRates()
+            
+            guard let country = CountryConverter.codeToCountry[self.viewModel?.selectedBaseCurrency.key ?? ""] else {
+                self.baseCurrancyFalgImageView.image = UIImage(named: "placeholder_Icon")
+                return
+            }
+            self.baseCurrancyFalgImageView.image = CountryManager.shared.country(withName: country)?.flag
         }
     }
     
