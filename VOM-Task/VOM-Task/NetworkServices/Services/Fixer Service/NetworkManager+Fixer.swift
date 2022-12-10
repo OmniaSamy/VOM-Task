@@ -20,9 +20,22 @@ extension NetworkManager {
     }
     
     func getCurrencySymbols(completion: @escaping(_ result: Swift.Result<CurrencySymbolModel, NetworkError>,
-                                                _ statusCode: Int?) -> Void) {
+                                                  _ statusCode: Int?) -> Void) {
         
         provider.request(MultiTarget(CurrencyService.getCurrencySymbols)) { result in
+            self.parseResponse(moyaResult: result, completion: completion)
+        }
+    }
+    
+    func convertCurrency(amount: String,
+                         baseCurrency: String,
+                         symbols: String,
+                         completion: @escaping(_ result: Swift.Result<ConvertCurrencyModel, NetworkError>,
+                                               _ statusCode: Int?) -> Void) {
+        
+        provider.request(MultiTarget(CurrencyService.convertCurrency(amount: amount,
+                                                                     baseCurrency: baseCurrency,
+                                                                     symbols: symbols))) { result in
             self.parseResponse(moyaResult: result, completion: completion)
         }
     }

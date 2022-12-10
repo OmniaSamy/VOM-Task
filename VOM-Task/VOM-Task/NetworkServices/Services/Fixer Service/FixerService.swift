@@ -10,10 +10,12 @@ import Moya
 
 //https://api.apilayer.com/fixer/latest
 //https://api.apilayer.com/fixer/symbols
+//https://api.apilayer.com/fixer/convert?amount=5&from=USD&to=EUR
 
 enum CurrencyService {
     case getCurrencyRates(currency: String)
     case getCurrencySymbols
+    case convertCurrency(amount: String, baseCurrency: String, symbols: String)
 }
 
 extension CurrencyService: TargetType {
@@ -28,6 +30,8 @@ extension CurrencyService: TargetType {
             return "/fixer/latest"
         case .getCurrencySymbols:
             return "/fixer/symbols"
+        case .convertCurrency:
+            return "/fixer/convert"
         }
     }
     
@@ -36,6 +40,8 @@ extension CurrencyService: TargetType {
         case .getCurrencyRates:
             return .get
         case .getCurrencySymbols:
+            return .get
+        case .convertCurrency:
             return .get
         }
     }
@@ -52,6 +58,11 @@ extension CurrencyService: TargetType {
             return .requestParameters(parameters: ["base": currency], encoding: URLEncoding.default)
         case .getCurrencySymbols:
             return .requestPlain
+            
+        case .convertCurrency(let amount, let baseCurrency, let symbols):
+            return .requestParameters(parameters: ["amount": amount,
+                                                   "from": baseCurrency, // base //symbols
+                                                   "to": symbols], encoding: URLEncoding.default)
         }
     }
     

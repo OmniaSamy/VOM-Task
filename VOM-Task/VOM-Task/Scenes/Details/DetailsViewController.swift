@@ -39,7 +39,13 @@ class DetailsViewController: BaseViewController {
 extension DetailsViewController {
     
     @IBAction func convertTapped(_ sender: Any) {
+        guard let amount = basecurrencyTextField.text else { return }
         
+        if (amount.isEmpty) {
+            self.showErrorMessage(errorMessage: "Amount is required")
+        } else {
+            convert(amount: (amount))
+        }
     }
 }
 
@@ -49,12 +55,23 @@ extension DetailsViewController {
     private func bindData() {
         
         baseCurrencyLabel.text = viewModel?.baseCurrency?.key
-        basecurrencyTextField.text = "1.00" //viewModel?.baseCurrency?.value
+        basecurrencyTextField.text = "1.00"
         selectedCurrancyLabel.text = viewModel?.selectedCurrencyRate?.key
         selectedCurrencyAmountLabel.text = String(viewModel?.selectedCurrencyRate?.value ?? 0)
     }
     
-    private func convert() {
+    private func convert(amount: String) {
         
+        self.showLoadingIndicator(view: self.view, type: .native)
+        viewModel?.convertCurrency(amount: amount, completion: {[weak self] (msg, success) in
+            guard let self = self else { return }
+            self.hideLoadingIndicator()
+            
+            if success {
+                self.selectedCurrencyAmountLabel.text = String(self.viewModel?.convertedCurrencyData?.result ?? 0)
+            } else {
+                self.showErrorMessage(errorMessage: msg ?? "")
+            }
+        })
     }
 }

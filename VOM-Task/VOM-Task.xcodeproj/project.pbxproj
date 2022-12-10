@@ -37,6 +37,7 @@
 		BFB885D42943562B00C6B820 /* UIColor+app.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885D32943562B00C6B820 /* UIColor+app.swift */; };
 		BFB885D82943567800C6B820 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFB885D72943567800C6B820 /* Colors.xcassets */; };
 		BFB885DB29435E7E00C6B820 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885DA29435E7E00C6B820 /* AppNavigationController.swift */; };
+		BFB885DD2944866400C6B820 /* ConvertCurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB885DC2944866400C6B820 /* ConvertCurrencyModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		BFB885D32943562B00C6B820 /* UIColor+app.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+app.swift"; sourceTree = "<group>"; };
 		BFB885D72943567800C6B820 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		BFB885DA29435E7E00C6B820 /* AppNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
+		BFB885DC2944866400C6B820 /* ConvertCurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertCurrencyModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,7 @@
 			children = (
 				BFB885AE29426D4000C6B820 /* CurrencyDataModel.swift */,
 				BFB885D129433BD600C6B820 /* CurrencySymbolModel.swift */,
+				BFB885DC2944866400C6B820 /* ConvertCurrencyModel.swift */,
 			);
 			path = Fixer;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				BF7119D129424AAE00BB95D1 /* AppDelegate.swift in Sources */,
 				BFB885C32943257E00C6B820 /* DetailsViewController.swift in Sources */,
 				BFB885CC29432BF400C6B820 /* CurrencyTableViewCell.swift in Sources */,
+				BFB885DD2944866400C6B820 /* ConvertCurrencyModel.swift in Sources */,
 				BFB8859A29425D1F00C6B820 /* NetworkDefaults.swift in Sources */,
 				BFB885BA29431F8F00C6B820 /* BaseViewController.swift in Sources */,
 				BFB885A9294262D300C6B820 /* AppDelegate+Extension.swift in Sources */,
