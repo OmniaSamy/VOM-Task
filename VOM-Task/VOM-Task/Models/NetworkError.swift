@@ -54,7 +54,6 @@ struct NetworkError: Codable, Error, LocalizedError {
 extension NetworkError {
     static let parseError: NetworkError = {
         var error = NetworkError()
-        print(error.message) 
         return error
     }()
     
